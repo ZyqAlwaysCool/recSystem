@@ -28,7 +28,7 @@
 * 启动spark推荐服务:`./bin/spark-submit /home/ubuntu/test.py`
 * 命令行启动kafka:.`/bin/kafka-server-start.sh config/server.properties`
 * 消费kafka中的topic: `~/kafka/kafka_2.11-1.0.0/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test_topic --from-beginning`
-*python消费kafka中数据:`consumer = KafkaConsumer("topic",bootstrap_servers=['localhost:9092'], auto_offset_reset='smallest')`
+* python消费kafka中数据:`consumer = KafkaConsumer("topic",bootstrap_servers=['localhost:9092'], auto_offset_reset='smallest')`
 * auto_offset_reset='smallest'表示重置队列偏移量，类似于--from-beginning
 
 ### spark服务
