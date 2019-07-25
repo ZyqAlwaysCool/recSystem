@@ -1,0 +1,303 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title class="movieNameTitle">电影推荐-电影名</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/am-pagination.css">
+        <link href="css/plugins/slick/slick.css" rel="stylesheet">
+        <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
+        <link href="css/star-rating.min.css" media="all" rel="stylesheet" type="text/css"/>
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+
+
+    </head>
+
+    <body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> 
+                            <a data-toggle="dropdown" class="dropdown-toggle">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold usrId">未登录</strong>
+                                </span>  <div class="more"></div></span> </a>
+                                <ul class="dropdown-menu animated fadeInRight m-t-xs ddMenu">
+                                    
+                                </ul>
+                            
+                        </div>
+                        <div class="logo-element">
+                            MR
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-diamond"></i> <span class="nav-label">首页推荐</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="allmovies.html"><i class="fa fa-th-large"></i> <span class="nav-label">浏览全部</span></a>
+                    </li>
+                    <li>
+                        <a href="ranklist.html"><i class="fa fa-list-ol"></i> <span class="nav-label">排行榜</span></a>
+                    </li>
+                    <!-- <li>
+                        <a href="charts.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">统计</span></a>
+                    </li> -->
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">欢迎登录电影推荐系统</span>
+                        </li>
+                        
+
+
+                        <li class="logBtn">
+                                
+                            </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2 class="movieName"></h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="allmovies.html">所有电影</a>
+                        </li>
+                        <li class="active">
+                            <strong>电影</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+
+            <div class="wrapper wrapper-content animated fadeInRight">
+
+                
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="ibox product-detail">
+                            <div class="ibox-content">
+
+                                <div class="row">
+                                    <div class="col-md-5">
+
+
+                                        <div class="product-images" id="bigPicContainer">
+                                            
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-7">
+
+                                        <h1 class="font-bold m-b-xs movieName">
+                                            
+                                        </h1>
+                                        <h2 class="product-main-price movieDir">
+                                        </h2>
+                                        <small class="movieYear"></small>
+                                        <hr>
+                                        <div>
+                                            <!--评分插件-->
+                                                <h3 class="font-bold m-b-xs">为电影打分!以提高推荐准确度</h3>
+                                                <input id="rating-input" class="pull-right" type="text" title=""/>
+                                        </div>
+                                        <hr>
+                                        <h4>电影简介</h4>
+
+                                        <div class="small text-muted">
+                                            <p class="movieIntro"></p>
+                                        </div>
+                                        <dl class="dl-horizontal m-t-md small movieDetailedInfo">
+                                            
+                                        </dl>
+                                        <div class="text-right">
+                                            <div class="btn-group">
+                                                <button class="btn btn-white btn-sm"><i class="fa fa-star"></i> 喜欢这部电影，添加至收藏！</button>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            
+
+            <div class="ibox">
+                                    <div class="ibox-title">
+                                        <!--span class="pull-right"> 历史评分</span-->
+                                        <h5>猜你喜欢</h5>
+                                    </div>
+                                    <div class="movieContainer"></div>
+
+                                    <div class="ibox-content">
+
+                                        <nav aria-label="Page navigation" class="page-nav-outer" id="PageNavId">
+
+                                        </nav>
+
+
+        </div>
+        <div class="footer">
+                    <div class="pull-right">
+                        <strong>Movie recommend system based on SPARK</strong>
+                    </div>
+                    <div>
+                        <strong>SMU</strong>
+                    </div>
+                </div>
+    </div>
+
+                    <div class="modal inmodal fade in" id="myModal6" tabindex="-1" role="dialog" aria-hidden="true" style="display: none; padding-right: 17px;">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">登录</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="m-t">
+                            <div class="form-group">
+                                <input type="email" class="form-control userEmail" placeholder="邮箱" required="">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control userPassword" placeholder="密码" required="">
+                            </div>
+                            <button class="btn btn-primary block full-width m-b logInBtn" >登录</button>
+
+                            <p class="text-muted text-center">
+                                <small>没有帐号？</small>
+                            </p>
+                            <a class="btn btn-sm btn-white btn-block beginSignUp" data-toggle="modal" data-target="#myModal7">注册一个帐号</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal inmodal fade in" id="myModal7" tabindex="-1" role="dialog" aria-hidden="true" style="display: none; padding-right: 17px;">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">注册</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="middle-box text-center loginscreen">
+                            <div>
+                                <div class="m-t">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control signUpEmail" placeholder="注册邮箱" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control signUpPassword1" placeholder="密码" required="">
+                                    </div>
+                                    <button class="btn btn-primary block full-width m-b signUpBtn">注册</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="historyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 65%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">打分历史</h4>
+            </div>
+            <div class="modal-body"><!--分页历史-->
+                <div class="row-fluid"><div class="col-md-12">
+
+                    <pre style="font-weight: bold;" class="showlabel"></pre>
+                </br>
+                <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                <div id="ampagination-bootstrap"></div>
+            </div></div>
+            
+            
+        </div>
+        <div class="modal-footer">
+        </div>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal -->
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/star-rating.min.js" type="text/javascript"></script>
+    <!-- slick carousel-->
+    <script src="js/plugins/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/am-pagination.min.js"></script>
+    <script src="js/loginjs.js"></script>
+    <script src="js/detailedjs.js"></script>
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.product-images').slick({
+                dots: true
+            });
+
+        });
+
+    </script>
+
+    </body>
+
+    </html>

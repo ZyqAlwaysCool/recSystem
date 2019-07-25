@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title class="movieNameTitle">电影推荐-排行榜</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/am-pagination.css">
+        <link href="css/plugins/slick/slick.css" rel="stylesheet">
+        <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
+        <link href="css/star-rating.min.css" media="all" rel="stylesheet" type="text/css"/>
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> 
+                            <a data-toggle="dropdown" class="dropdown-toggle">
+                                <span class="clear"> 
+                                    <span class="block m-t-xs"> 
+                                        <strong class="font-bold usrId">未登录</strong>
+                                    </span>  
+                                    <div class="more"></div>
+                                </span> 
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs ddMenu">
+
+                            </ul>
+                            
+                        </div>
+                        <div class="logo-element">
+                            MR
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-diamond"></i> <span class="nav-label">首页推荐</span></a>
+                    </li>
+                    <li>
+                        <a href="allmovies.html"><i class="fa fa-th-large"></i> <span class="nav-label">浏览全部</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="ranklist.html"><i class="fa fa-list-ol"></i> <span class="nav-label">排行榜</span></a>
+                    </li>
+                    <!-- <li>
+                        <a href="charts.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">统计</span></a>
+                    </li> -->
+                </ul>
+
+            </div>
+        </nav>
+
+            <div id="page-wrapper" class="gray-bg">
+                    <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">欢迎登录电影推荐系统</span>
+                        </li>
+                        
+
+
+                        <li class="logBtn">
+                                
+                            </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>排行榜</h2>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <a href="ranklist.html">排行榜</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+
+                    <div class="wrapper wrapper-content animated fadeInRight" id="ranklist">
+                        
+
+                        
+                        
+<!--                         <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget navy-bg no-padding">
+                                    <div class="p-m">
+                                        <table class="table shoping-cart-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="desc">
+                                                        <h1 class="m-xs font-bold">3.</h1>
+                                                        <dl class="small m-b-none">
+                                                            <dt><h2 class="m-xs">亲家人娘家人 Love Is All There Is</h2></dt>
+                                                        </dl>
+                                                        <h3 class="m-xs font-bold">Joseph Bologna</h3>
+                                                        <div class="m-t-sm">
+                                                            <p class="m-xs small">Love Is All There Is is a modern retelling of the Romeo and Juliet story. It is set in the Bronx during the 1990s. The Cappamezzas (Lainie Kazan and Joseph Bologna), Bronx-born Sicilians, own a local catering business. They develop a bitter rivalry with the pretentious Malacicis (Paul Sorvino and Barbara Carrera), recent immigrants from Florence and owners of a fine Italian restaurant.</p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="160">
+                                                        <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2198338980.jpg" class="carousel-inner img-responsive">
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget lazur-bg no-padding">
+                                    <div class="p-m">
+                                        <table class="table shoping-cart-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="desc">
+                                                        <h2 class="m-xs font-bold">4.</h2>
+                                                        <dl class="small m-b-none">
+                                                            <dt><h2 class="m-xs">007之黄金眼 GoldenEye</h2></dt>
+                                                        </dl>
+                                                        <h3 class="m-xs font-bold">马丁·坎贝尔</h3>
+                                                        <div class="m-t-sm">
+                                                            <p class="m-xs small">我们的邦德（皮尔斯•布鲁斯南 Pierce Brosnan 饰）又回来了!这次的任务是找回被苏联偷走的黄金眼——黄金眼是一种新式的电磁波武器。007经过缜密调查，发现背后的黑手是曾经和他一起出生入死的好兄弟——006艾利克（肖恩•宾 Sean Bean 饰）。</p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="120">
+                                                        <img src="https://img3.doubanio.com/view/photo/m/public/p1720407604.webp" class="carousel-inner img-responsive">
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget lazur-bg no-padding">
+                                    <div class="p-m">
+                                        <table class="table shoping-cart-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="desc">
+                                                        <h2 class="m-xs font-bold">5.</h2>
+                                                        <dl class="small m-b-none">
+                                                            <dt><h2 class="m-xs">亡魂岛 Island of Lost Souls</h2></dt>
+                                                        </dl>
+                                                        <h3 class="m-xs font-bold">厄尔·肯顿</h3>
+                                                        <div class="m-t-sm">
+                                                            <p class="m-xs small">本片改编自威尔斯的小说。讲述一位科学家在岛上进行人兽杂交的实验，试图制造出伟大的超人。然而屡次地失败却产生了可怕的后果：大量的畸形人。他们受到奴役和虐待。一次海难使一批英国人登上了这个小岛，科学家试图用一个豹女和一位客人交配。最后，那些畸形人造反并推翻了这个邪恶的科学家。</p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="120">
+                                                        <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1828184047.jpg" class="carousel-inner img-responsive">
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget lazur-bg no-padding">
+                                    <div class="p-m">
+                                        <table class="table shoping-cart-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="desc">
+                                                        <h2 class="m-xs font-bold">6.</h2>
+                                                        <dl class="small m-b-none">
+                                                            <dt><h2 class="m-xs">特别的吻给特别的你 Kissed</h2></dt>
+                                                        </dl>
+                                                        <h3 class="m-xs font-bold">林恩·史都克威</h3>
+                                                        <div class="m-t-sm">
+                                                            <p class="m-xs small">珊卓自小迷恋未知的神秘世界、对动物尸体总是寄予无以名状哀怜之情，她眷恋死亡的氛围、死尸的气味，她为一切尸体进行她所坚持的死亡仪式。珊卓长大之后，在一次送花到殡仪馆的机缘之下，决定应征全职的死尸化妆师。她跟馆主学习腐尸的善后及上妆技巧，她一步一步的试探底线、她发掘、犹豫、进而跨越、着迷。珊卓在工作中探索出生命最深层的真意，并藉此发现了爱欲殿堂的信道。</p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="120">
+                                                        <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2261768097.jpg" class="carousel-inner img-responsive">
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget lazur-bg no-padding">
+                                    <div class="p-m">
+                                        <table class="table shoping-cart-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="desc">
+                                                        <h2 class="m-xs font-bold">7.</h2>
+                                                        <dl class="small m-b-none">
+                                                            <dt><h2 class="m-xs">致命邀请 The Invitation</h2></dt>
+                                                        </dl>
+                                                        <h3 class="m-xs font-bold">卡瑞恩·库萨马</h3>
+                                                        <div class="m-t-sm">
+                                                            <p class="m-xs small">威尔（罗根·马歇尔-格林 Logan Marshall-Green 饰）和伊登（坦米·布兰查德 Tammy Blanchard 饰）曾拥有一个幸福的三口之家，但是数年前儿子的意外身亡让夫妻俩的生活跌落谷底。在此之后，他们选择分手，各自展开不同的人生。这一日，威尔接到来自伊登的邀请函，邀请他和现任女友基拉（伊梅雅格特伊·科伦尼伊乐迪 Emayatzy Corinealdi 饰）来夫妻俩曾经有过快乐和悲伤记忆的房子里参加派对。面色凝重的威尔驱车抵达，见到了新老朋友、伊登及其现任丈夫戴维（米契尔·哈思曼 Michiel Huisman 饰）。</p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="120">
+                                                        <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2349897434.jpg" class="carousel-inner img-responsive">
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget lazur-bg no-padding">
+                                    <div class="p-m">
+                                        <table class="table shoping-cart-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="desc">
+                                                        <h2 class="m-xs font-bold">8.</h2>
+                                                        <dl class="small m-b-none">
+                                                            <dt><h2 class="m-xs">永远的蝙蝠侠 Batman Forever</h2></dt>
+                                                        </dl>
+                                                        <h3 class="m-xs font-bold">乔·舒马赫</h3>
+                                                        <div class="m-t-sm">
+                                                            <p class="m-xs small">高谭市的黑暗势力又开始蠢蠢欲动了，这次是毁了半边脸的“双面人”（汤米•李•琼斯 Tommy Lee Jones 饰）。一次，“双面人”袭击了马戏团，演员迪克（克里斯•奥唐纳 Chris O'Donnell 饰）阻止了“双面人”的阴谋，家人却因此惨遭杀害。</p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="120">
+                                                        <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2410156576.jpg" class="carousel-inner img-responsive">
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget lazur-bg no-padding">
+                                    <div class="p-m">
+                                        <table class="table shoping-cart-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="desc">
+                                                        <h2 class="m-xs font-bold">9.</h2>
+                                                        <dl class="small m-b-none">
+                                                            <dt><h2 class="m-xs">空军一号 Air Force One</h2></dt>
+                                                        </dl>
+                                                        <h3 class="m-xs font-bold">沃尔夫冈·彼德森</h3>
+                                                        <div class="m-t-sm">
+                                                            <p class="m-xs small">俄美两国策划一起反恐行动，派出特种部队擒获了掌握核武器的哈萨克王国独裁者伊万•雷迪克将军（Jurgen Prochnow 饰）。数周后的庆功宴上，曾为越战老兵的美国总统詹姆斯•马舍尔（哈里森•福特Harrison Ford 饰）针对恐怖分子和独裁政权发表了强硬而精彩的演说。莫斯科之旅圆满结束，总统一家及其政要乘空军一号返回美国，同行的还有艾格（加里•奥德曼 Gary Oldman 饰）带队的俄罗斯媒体工作人员。</p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="120">
+                                                        <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2143835662.jpg" class="carousel-inner img-responsive">
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget lazur-bg no-padding">
+                                    <div class="p-m">
+                                        <table class="table shoping-cart-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="desc">
+                                                        <h2 class="m-xs font-bold">10.</h2>
+                                                        <dl class="small m-b-none">
+                                                            <dt><h2 class="m-xs">天堂电影院 Nuovo Cinema Paradiso</h2></dt>
+                                                        </dl>
+                                                        <h3 class="m-xs font-bold">朱塞佩·托纳多雷</h3>
+                                                        <div class="m-t-sm">
+                                                            <p class="m-xs small">意大利南部小镇，古灵精怪的小男孩多多（萨瓦特利·卡西欧 饰）喜欢看电影，更喜欢看放映师艾佛特（菲利浦·诺瓦雷 饰）放电影，他和艾佛特成为了忘年之交，在胶片中找到了童年生活的乐趣。</p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="120">
+                                                        <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1910901025.jpg" class="carousel-inner img-responsive">
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+
+                    </div>
+                    <div class="footer">
+                    <div class="pull-right">
+                        <strong>Movie recommend system based on SPARK</strong>
+                    </div>
+                    <div>
+                        <strong>SMU</strong>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+            <!-- Mainly scripts -->
+            <script src="js/jquery-2.1.1.js"></script>
+            <script src="js/jquery-ui-1.10.4.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+            <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+            <!-- Custom and plugin javascript -->
+            <script src="js/inspinia.js"></script>
+            <script src="js/plugins/pace/pace.min.js"></script>
+
+            <!-- iCheck -->
+            <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+            <!-- Jvectormap -->
+            <script src="js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+            <script src="js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+
+            <!-- Flot -->
+            <script src="js/plugins/flot/jquery.flot.js"></script>
+            <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+            <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+            <script src="js/loginjs.js"></script>
+            <script src="js/rankjs.js"></script>
+
+
+        </body>
+
+        </html>

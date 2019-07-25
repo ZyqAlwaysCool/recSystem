@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>所有电影</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/pageNav.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/am-pagination.css">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+    <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> 
+                            <a data-toggle="dropdown" class="dropdown-toggle">
+                                <span class="clear"> 
+                                    <span class="block m-t-xs"> 
+                                        <strong class="font-bold usrId">未登录</strong>
+                                    </span>  
+                                    <div class="more"></div>
+                                </span> 
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs ddMenu">
+
+                            </ul>
+                            
+                        </div>
+                        <div class="logo-element">
+                            MR
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-diamond"></i> <span class="nav-label">首页推荐</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="allmovies.html"><i class="fa fa-th-large"></i> <span class="nav-label">浏览全部</span></a>
+                    </li>
+                    <li>
+                        <a href="ranklist.html"><i class="fa fa-list-ol"></i> <span class="nav-label">排行榜</span></a>
+                    </li>
+                    <!-- <li>
+                        <a href="charts.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">统计</span></a>
+                    </li> -->
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">欢迎登录电影推荐系统</span>
+                        </li>
+                        
+
+
+                        <li class="logBtn">
+
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>浏览全部</h2>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <a href="allmovies.html">所有电影</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+
+            <div class="wrapper wrapper-content animated fadeInRight">
+
+
+
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <div class="ibox-content m-b-sm border-bottom">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>
+                                        国家/地区
+                                    </p>
+                                    <select class="select2_demo_3 form-control">
+                                        <option></option>
+                                        <option value="中国">中国</option>
+                                        <option value="美国">美国</option>
+                                        <option value="台湾">台湾</option>
+                                        <option value="香港">香港</option>
+                                        <option value="西班牙">西班牙</option>
+                                        <option value="英国">英国</option>
+                                        <option value="法国">法国</option>
+                                        <option value="德国">德国</option>
+                                        <option value="日本">日本</option>
+                                        <option value="韩国">韩国</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>
+                                        类型
+                                    </p>
+                                    <select class="select2_demo_2 form-control" multiple="multiple">
+                                        <option value="喜剧">喜剧</option>
+                                        <option value="纪录片">纪录片</option>
+                                        <option value="音乐">音乐</option>
+                                        <option value="歌舞">歌舞</option>
+                                        <option value="历史">历史</option>
+                                        <option value="传记">传记</option>
+                                        <option value="战争">战争</option>
+                                        <option value="恐怖">恐怖</option>
+                                        <option value="动作">动作</option>
+                                        <option value="剧情">剧情</option>
+                                        <option value="爱情">爱情</option>
+                                        <option value="犯罪">犯罪</option>
+                                        <option value="科幻">科幻</option>
+                                        <option value="冒险">冒险</option>
+                                        <option value="家庭">家庭</option>
+                                        <option value="动画">动画</option>
+                                        <option value="奇幻">奇幻</option>
+                                        <option value="悬疑">悬疑</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12" style="margin-top: 20px">
+                                    <button type="button" class="btn btn-w-m btn-success">筛选</button>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+
+
+
+                        <div class="ibox">
+                            <div class="ibox-title">
+                                <!--span class="pull-right"> 历史评分</span-->
+                                <h5>浏览</h5>
+                            </div><div class="allMovies">
+                                <div class="movieContainer"></div>
+                            </div>
+                            
+                            
+                            <div class="ibox-content">
+
+                                <nav aria-label="Page navigation" class="page-nav-outer" id="PageNavId">
+
+                                </nav>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    <strong>Movie recommend system based on SPARK</strong>
+                </div>
+                <div>
+                    <strong>SMU</strong>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal inmodal fade in" id="myModal6" tabindex="-1" role="dialog" aria-hidden="true" style="display: none; padding-right: 17px;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">登录</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="m-t">
+                        <div class="form-group">
+                            <input type="email" class="form-control userEmail" placeholder="邮箱" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control userPassword" placeholder="密码" required="">
+                        </div>
+                        <button class="btn btn-primary block full-width m-b logInBtn" >登录</button>
+
+                        <p class="text-muted text-center">
+                            <small>没有帐号？</small>
+                        </p>
+                        <a class="btn btn-sm btn-white btn-block beginSignUp" data-toggle="modal" data-target="#myModal7">注册一个帐号</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal inmodal fade in" id="myModal7" tabindex="-1" role="dialog" aria-hidden="true" style="display: none; padding-right: 17px;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">注册</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="middle-box text-center loginscreen">
+                        <div>
+                            <div class="m-t">
+                                <div class="form-group">
+                                    <input type="email" class="form-control signUpEmail" placeholder="注册邮箱" required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control signUpPassword1" placeholder="密码" required="">
+                                </div>
+                                <button class="btn btn-primary block full-width m-b signUpBtn">注册</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="historyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 65%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">打分历史</h4>
+                </div>
+                <div class="modal-body"><!--分页历史-->
+                    <div class="row-fluid"><div class="col-md-12">
+
+                        <pre style="font-weight: bold;" class="showlabel"></pre>
+                    </br>
+                    <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                    <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                    <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                    <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                    <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                    <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                    <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                    <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                    <pre style="font-weight: bold;" class="showlabel"></pre></br>
+                    <div id="ampagination-bootstrap"></div>
+                </div></div>
+
+
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+    
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/pageNav.js"></script>
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    <script src="js/plugins/select2/select2.full.min.js"></script>
+    <script type="text/javascript" src="js/am-pagination.min.js"></script>
+    <script src="js/loginjs.js"></script>
+    <script src="js/allmoviejs.js"></script>
+    
+    
+</body>
+
+</html>
